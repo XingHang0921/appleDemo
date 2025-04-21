@@ -7,7 +7,7 @@ const App = () => {
     <main className="bg-black h-screen text-white">
       <Navbar />
       <Hero />
-      {/* <Highlights />  */}
+      <Highlights /> 
     </main>
   )
 }
