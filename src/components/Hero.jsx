@@ -28,12 +28,12 @@ const Hero = () => {
 
   return (
     <div className="relative items-center justify-center h-screen">
-        <div className="h-screen flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <h1 className="text-2xl font-semibold " id='heroTxt'>
                 iPhone 15 Pro
             </h1>
           <video src={video}
-            autoPlay muted></video>
+            autoPlay muted playsInline></video>
           <button id='heroBuy'className="py-2 px-4 rounded-full bg-blue"> Buy </button>
           <p id='heroBuy'className="pt-4 font-medium">From $199/month or $999</p>
 
