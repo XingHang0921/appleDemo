@@ -4,7 +4,7 @@ import Highlights from './components/Highlights'
 
 const App = () => {
   return (
-    <main className="bg-black h-screen text-white">
+    <main className=" bg-black h-screen text-white">
       <Navbar />
       <Hero />
       <Highlights /> 

@@ -14,11 +14,11 @@ const Highlights = () => {
               <img src={index === 0? watchImg : rightImg} 
                     alt={index === 0? watchImg : rightImg} 
                     className="ml-2"/>
-              
             </a>
           )
         })}
       </div>
+      <VideoCarousel/>
     </div>
   )
     
