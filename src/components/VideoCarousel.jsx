@@ -62,14 +62,17 @@ const VideoCarousel = () => {
               <div className="w-full h-full flex-center overflow-hidden rounded-3xl  bg-black">
                 <video src={list.video} key={index}  
                   playsInline muted preload="auto" video={list.video} type="video/mp4"
+
+                  ref={(el) => (videoRef.current[index] = el)}
+                  onPlay={()=>{setVideo((prevVideo) =>({...prevVideo, isPlaying:true}))}}
+
                   className="w-full h-full">
                 </video>
                 <div className="absolute top-12 left-[5%] opacity-50 z-10">
                   {list.textLists.map((text,index) =>{
                     return(
                       <p id={index} className="md:text-2xl font-medium text-xl ">
-                        {text}</p>
-                    )
+                        {text}</p>)
                   })}
                 </div>
               </div>
@@ -77,6 +80,22 @@ const VideoCarousel = () => {
           </div>
         )
         })}
+      <div className="relative flex-center mt-10">
+        <div className="flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
+            {videoRef.current.map((_,i) => (
+              <span
+                key={i}
+                ref={(el) => (videoDivRef.current[i] = el)}
+                className="mx-2 w-3 h-3 bg-gray-200 rounded-full cursor-pointer">
+                  <span ref={(el) => (videoSpanRef.current[i] = el)}
+                className="absolute h-full w-full rounded-full"/>
+              </span>
+            ))}
+        </div>
+        <button>
+          
+        </button>
+      </div>
     </div>
   )
 };
