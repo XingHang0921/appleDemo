@@ -23,7 +23,7 @@ const Hero = () => {
 
   useGSAP( ()=>{
     gsap.fromTo('#heroTxt', {opacity: 0},{opacity:1, delay:1.5})
-    gsap.from('#heroBuy', {y:300, delay:1.5, opacity: 0})
+    gsap.from('#heroBuy', {y:300, delay:1.5, opacity: 0, })
   }, [])
 
   return (
@@ -35,7 +35,7 @@ const Hero = () => {
           <video src={video}
             autoPlay muted playsInline></video>
           <button id='heroBuy'className="py-2 px-4 rounded-full bg-blue"> Buy </button>
-          <p id='heroBuy'className="pt-4 font-medium">From $199/month or $999</p>
+          <p id='heroBuy'className="pt-4 font-medium md:-translate-y-100">From $199/month or $999</p>
 
         </div>
     </div>
